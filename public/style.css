@@ -1,0 +1,421 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Google Sans', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+:root {
+    --primary-color: #00783E;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+header {
+    background-color: #fff;
+    padding: 20px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+header img {
+    height: 40px;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+header nav ul a {
+    color: #333;
+    font-weight: 500;
+}
+
+header nav ul a:hover {
+    color: var(--primary-color);
+    font-weight: 500;
+}
+
+header button {
+    background-color: var(--primary-color);
+    color: #fff;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 2rem;
+    cursor: pointer;
+}
+
+main {
+    padding: 4rem 2rem;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 2rem;
+    background-color: var(--primary-color);
+}
+
+main .content {
+    max-width: 500px;
+    color: #fff;
+}
+
+main .content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+main .content p {
+    font-size: 1.2rem;
+    color: #ddd;
+    margin-bottom: 2rem;
+}
+
+main ul {
+    margin-bottom: 2rem;
+    margin-left: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+main .content button {
+    background-color: #fff;
+    color: var(--primary-color);
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 2rem;
+    cursor: pointer;
+}
+
+main form {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: 500px;
+    padding: 2rem;
+    border: 1px solid #ddd;
+    border-radius: 3rem;
+    background-color: #fff;
+    max-width: 100%;
+}
+
+main form input,
+main form textarea {
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+}
+
+main form button {
+    background-color: var(--primary-color);
+    color: #fff;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 2rem;
+    cursor: pointer;
+}
+
+section {
+    padding: 4rem 2rem;
+}
+
+section h2 {
+    text-align: center;
+    font-size: 2.2rem;
+    color: #222;
+    margin-bottom: 1rem;
+}
+
+section>p {
+    max-width: 700px;
+    margin: 0 auto 3rem;
+    text-align: center;
+    color: #666;
+    font-size: 1.1rem;
+}
+
+#features,
+#use-cases,
+#pricing {
+    background-color: #fff;
+}
+
+#features {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+}
+
+#features h2,
+#features>p {
+    grid-column: 1 / -1;
+}
+
+#features div,
+#use-cases div,
+#pricing div {
+    background-color: #f8f8f8;
+    border: 1px solid #eee;
+    padding: 2rem;
+    border-radius: 2rem;
+    transition: 0.3s;
+}
+
+#features div:hover,
+#use-cases div:hover,
+#pricing div:hover {
+    transform: translateY(-5px);
+    border-color: var(--primary-color);
+}
+
+#features h3,
+#pricing h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+#features p,
+#pricing p {
+    color: #666;
+    line-height: 1.6;
+}
+
+#examples,
+#availability,
+#cta {
+    background-color: #f5fff9;
+}
+
+#examples ul {
+    max-width: 900px;
+    margin: 2rem auto 0;
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+#examples li {
+    background-color: #fff;
+    color: var(--primary-color);
+    border: 1px solid #d9f0e5;
+    padding: 1rem;
+    border-radius: 2rem;
+    text-align: center;
+    font-weight: 600;
+}
+
+#use-cases {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+#use-cases h2 {
+    grid-column: 1 / -1;
+}
+
+#use-cases div {
+    text-align: center;
+    color: #333;
+    font-weight: 600;
+}
+
+#availability form {
+    max-width: 600px;
+    margin: auto;
+    display: flex;
+    gap: 1rem;
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: 3rem;
+    border: 1px solid #ddd;
+}
+
+#availability input {
+    flex: 1;
+    border: none;
+    outline: none;
+    padding: 1rem;
+    font-size: 1rem;
+}
+
+#availability button,
+#cta button {
+    background-color: var(--primary-color);
+    color: #fff;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 2rem;
+    cursor: pointer;
+}
+
+#pricing {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+#pricing h2 {
+    grid-column: 1 / -1;
+}
+
+#faq {
+    background-color: #fff;
+    max-width: 900px;
+    margin: auto;
+}
+
+#faq h3 {
+    color: var(--primary-color);
+    margin-top: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+#faq p {
+    color: #666;
+    line-height: 1.6;
+    text-align: left;
+    margin: 0;
+}
+
+#cta {
+    text-align: center;
+}
+
+#cta h2 {
+    color: var(--primary-color);
+}
+
+#cta p {
+    margin-bottom: 2rem;
+}
+
+@media (max-width: 992px) {
+    header {
+        padding: 18px 4%;
+    }
+
+    main {
+        flex-direction: column;
+        text-align: center;
+        padding: 4rem 4%;
+    }
+
+    main ul {
+        text-align: left;
+        max-width: 500px;
+        margin: 0 auto 2rem;
+    }
+
+    #features {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    #use-cases,
+    #pricing {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    #examples ul {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    header nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    header button {
+        padding: 0.8rem 1.5rem;
+    }
+
+    main {
+        min-height: auto;
+        padding: 3rem 1.2rem;
+    }
+
+    main form {
+        padding: 1.5rem;
+        border-radius: 1.5rem;
+    }
+
+    section {
+        padding: 3.5rem 1.2rem;
+    }
+
+    #features,
+    #use-cases,
+    #pricing,
+    #examples ul {
+        grid-template-columns: 1fr;
+    }
+
+    #availability form {
+        flex-direction: column;
+        border-radius: 1.5rem;
+    }
+
+    #availability button {
+        width: 100%;
+    }
+}
+
+/* Small Mobile */
+@media (max-width: 420px) {
+    header img {
+        height: 35px;
+    }
+
+    header nav ul {
+        font-size: 0.9rem;
+    }
+
+    main .content p,
+    section>p {
+        font-size: 1rem;
+    }
+
+    main form,
+    #features div,
+    #use-cases div,
+    #pricing div {
+        padding: 1.2rem;
+    }
+
+    header button,
+    main .content button,
+    main form button,
+    #availability button,
+    #cta button {
+        width: 100%;
+        padding: 0.9rem 1.2rem;
+    }
+}
+
+footer {
+    background-color: #000;
+    text-align: center;
+    padding: 2rem 1rem;
+    color: #fff;
+    font-size: 0.9rem;
+}
