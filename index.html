@@ -213,6 +213,43 @@
                 + ".niii.xyz";
         });
     </script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+<script>
+emailjs.init("iMlSnWl8-iyjYYl3u");
+
+document.querySelector("form").addEventListener("submit", async (e) => {
+    e.preventDefault();
+
+    const btn = e.target.querySelector("button");
+    btn.disabled = true;
+    btn.innerText = "Sending...";
+
+    try {
+        await emailjs.send(
+            "service_x7sbxk9",
+            "template_1t1gf1s",
+            {
+                name: e.target.name.value,
+                email: e.target.email.value,
+                shortName: e.target.short_name.value,
+                purpose: e.target.message.value,
+                needWebsite: e.target.offer.checked ? "Yes" : "No"
+            }
+        );
+
+        alert("Request sent successfully!");
+        e.target.reset();
+
+    } catch (err) {
+        console.error(err);
+        alert("Failed to send request.");
+    }
+
+    btn.disabled = false;
+    btn.innerText = "Request Short Name";
+});
+</script>
 </body>
 
 </html>
