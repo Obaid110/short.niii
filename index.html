@@ -4,17 +4,65 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="title" content="NIII">
+
+    <!-- SEO Primary Tags -->
+    <title>NIII Short | Branded Short Subdomains & Clean Redirects</title>
     <meta name="description"
-        content="NIII builds innovative AI solutions, web applications, automation tools, and digital products that help businesses grow, scale, and turn ideas into reality.">
-    <title>NIII - Short Subdomains for Your Business</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="icon" href="images/logo.png" type="image/png">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+        content="Create custom short subdomains and branded redirect links. Perfect for local shops, freelancers, creators, and startups. Elevate your brand trust today.">
+    <meta name="keywords"
+        content="short subdomain, custom short link, business short name, branded redirect link, NIII.xyz short name, bio link, short URL for business, shop subdomain">
+    <link rel="canonical" href="https://short.niii.xyz">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#4F46E5">
+
+    <!-- Open Graph / Facebook / WhatsApp -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://short.niii.xyz">
+    <meta property="og:title" content="NIII Short | Branded Short Subdomains & Clean Redirects">
+    <meta property="og:description"
+        content="Get clean redirect links and short subdomains like yourbrand.niii.xyz. Built for businesses, creators, and startups to build instant trust.">
+    <meta property="og:image" content="https://short.niii.xyz/images/logo.png">
+    <meta property="og:site_name" content="NIII Short">
+
+    <!-- Twitter Card Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://short.niii.xyz">
+    <meta name="twitter:title" content="NIII Short | Branded Short Subdomains & Clean Redirects">
+    <meta name="twitter:description"
+        content="Upgrade your links to short subdomains like store.niii.xyz. Clean, professional, and trusted redirect links for your business.">
+    <meta name="twitter:image" content="https://short.niii.xyz/images/logo.png">
+
+    <!-- Favicons & Icons -->
+    <link rel="icon" type="image/png" sizes="32x32" href="https://short.niii.xyz/images/logo.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://short.niii.xyz/images/logo.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://short.niii.xyz/images/logo.png">
+    <link rel="manifest" href="https://short.niii.xyz/images/logo.png">
+
+    <!-- Structured Data (JSON-LD) for Service -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "serviceType": "Branded Link Shortening and Custom Subdomains",
+      "provider": {
+        "@type": "Organization",
+        "name": "NIII Short",
+        "url": "https://short.niii.xyz"
+      },
+      "name": "NIII Short Link Customization",
+      "description": "Provides clean redirect links and short professional subdomains (e.g., abc.niii.xyz) for businesses, online shops, freelancers, startups, and content creators.",
+      "audience": {
+        "@type": "Audience",
+        "audienceType": "Small businesses, online sellers, local shops, startups, freelancers, content creators"
+      },
+      "offers": {
+        "@type": "Offer",
+        "priceCurrency": "USD",
+        "price": "0.00",
+        "description": "Free and premium tiers for custom business subdomains and branded redirect links."
+      }
+    }
+    </script>
 </head>
 
 <body>
@@ -69,10 +117,11 @@
             <input type="text" name="short_name" placeholder="Your Short Name e.g. abc" required>
             <textarea name="message" placeholder="Tell us about your business, shop, or link purpose"
                 required></textarea>
-                
+
             <label>
                 <input type="checkbox" name="offer">&nbsp;&nbsp;&nbsp;
-                Need a email like info@abc.niii.xyz Website & Hosting (Free Hosting Support: Vercel, InfinityFree, Cloudflare Pages, Netlify, Render
+                Need a email like info@abc.niii.xyz Website & Hosting (Free Hosting Support: Vercel, InfinityFree,
+                Cloudflare Pages, Netlify, Render
                 & More)
             </label>
 
@@ -215,41 +264,41 @@
     </script>
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 
-<script>
-emailjs.init("iMlSnWl8-iyjYYl3u");
+    <script>
+        emailjs.init("iMlSnWl8-iyjYYl3u");
 
-document.querySelector("form").addEventListener("submit", async (e) => {
-    e.preventDefault();
+        document.querySelector("form").addEventListener("submit", async (e) => {
+            e.preventDefault();
 
-    const btn = e.target.querySelector("button");
-    btn.disabled = true;
-    btn.innerText = "Sending...";
+            const btn = e.target.querySelector("button");
+            btn.disabled = true;
+            btn.innerText = "Sending...";
 
-    try {
-        await emailjs.send(
-            "service_x7sbxk9",
-            "template_1t1gf1s",
-            {
-                name: e.target.name.value,
-                email: e.target.email.value,
-                shortName: e.target.short_name.value,
-                purpose: e.target.message.value,
-                needWebsite: e.target.offer.checked ? "Yes" : "No"
+            try {
+                await emailjs.send(
+                    "service_x7sbxk9",
+                    "template_1t1gf1s",
+                    {
+                        name: e.target.name.value,
+                        email: e.target.email.value,
+                        shortName: e.target.short_name.value,
+                        purpose: e.target.message.value,
+                        needWebsite: e.target.offer.checked ? "Yes" : "No"
+                    }
+                );
+
+                alert("Request sent successfully!");
+                e.target.reset();
+
+            } catch (err) {
+                console.error(err);
+                alert("Failed to send request.");
             }
-        );
 
-        alert("Request sent successfully!");
-        e.target.reset();
-
-    } catch (err) {
-        console.error(err);
-        alert("Failed to send request.");
-    }
-
-    btn.disabled = false;
-    btn.innerText = "Request Short Name";
-});
-</script>
+            btn.disabled = false;
+            btn.innerText = "Request Short Name";
+        });
+    </script>
 </body>
 
 </html>
